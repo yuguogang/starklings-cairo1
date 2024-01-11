@@ -5,19 +5,19 @@
 use array::ArrayTrait;
 use debug::PrintTrait;
 
-// I AM NOT DONE
+
 
 fn main() {
     let arr0 = ArrayTrait::new();
 
-    let mut arr1 = fill_arr(arr0);
+    let mut arr1 = fill_arr(@arr0);
 
     // Do not change the following line!
     arr0.print();
 }
 
-fn fill_arr(arr: Array<felt252>) -> Array<felt252> {
-    let mut arr = arr;
+fn fill_arr( arr: @Array<felt252>) -> Array<felt252> {
+    let mut arr = arr.clone();
 
     arr.append(22);
     arr.append(44);
